@@ -8,6 +8,7 @@ declare global {
   interface Window {
     plainRoss: any;
     observableRoss: any;
+    makeObservableRoss: any;
     ross: any;
     rachel: any;
     emily: any;

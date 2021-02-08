@@ -1,6 +1,6 @@
 import "./Demo01-console";
 
-export const Demo01 = () => {
+export default function Demo01() {
   return (
     <>
       <h1>Demo 01 - observer(...) and autorun(...)</h1>
@@ -98,4 +98,4 @@ autorun(() => {
       </ol>
     </>
   );
-};
+}
