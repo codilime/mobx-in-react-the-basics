@@ -14,6 +14,8 @@ declare global {
     emily: any;
     chandler: any;
     joey: any;
+    Friend: any;
+    FriendWithDecorators: any;
   }
 }
 
