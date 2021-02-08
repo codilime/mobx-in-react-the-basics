@@ -19,6 +19,22 @@ export default function Demo04() {
             </pre>
           </code>
         </li>
+        <li>
+          Type:
+          <br />
+          <code>
+            <pre>
+              {`autorun(() => {
+  console.log("\\x1b[36m Friends from autorun():");
+  console.log(friends[0].fullName);
+});
+
+runInAction(() => {
+  friends[1].fullName = "Monica Geller";
+});`}
+            </pre>
+          </code>
+        </li>
       </ol>
     </>
   );
