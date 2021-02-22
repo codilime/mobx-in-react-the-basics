@@ -1,6 +1,6 @@
 import "./Demo03-console";
-import { Demo } from "../_/demo/Demo";
-import { Section } from "../_/section/Section";
+import { Demo } from "../common/demo/Demo";
+import { Section } from "../common/section/Section";
 
 export default function Demo03() {
   return (

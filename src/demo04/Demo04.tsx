@@ -1,6 +1,6 @@
 import "./Demo04-console";
-import { Demo } from "../_/demo/Demo";
-import { Section } from "../_/section/Section";
+import { Demo } from "../common/demo/Demo";
+import { Section } from "../common/section/Section";
 
 export default function Demo04() {
   return (
@@ -11,20 +11,18 @@ export default function Demo04() {
         </Section>
         <Section>
           Type:
-          <br />
-          <code>
-            <pre>
+          <pre>
+            <code>
               {`runInAction(() => {
   friends[0].fullName = "Chandler Bing";
 });`}
-            </pre>
-          </code>
+            </code>
+          </pre>
         </Section>
         <Section>
           Type:
-          <br />
-          <code>
-            <pre>
+          <pre>
+            <code>
               {`autorun(() => {
   console.log("Friends from autorun():");
   console.log(friends[0].fullName);
@@ -33,8 +31,8 @@ export default function Demo04() {
 runInAction(() => {
   friends[1].fullName = "Monica Geller";
 });`}
-            </pre>
-          </code>
+            </code>
+          </pre>
         </Section>
       </Demo>
     </>

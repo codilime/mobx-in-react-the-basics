@@ -1,6 +1,6 @@
 import "./Demo01-console";
-import { Demo } from "../_/demo/Demo";
-import { Section } from "../_/section/Section";
+import { Demo } from "../common/demo/Demo";
+import { Section } from "../common/section/Section";
 
 export default function Demo01() {
   return (
@@ -25,14 +25,13 @@ export default function Demo01() {
       </Section>
       <Section>
         Add at the beginning:
-        <br />
-        <code>
-          <pre>
+        <pre>
+          <code>
             {`configure({
   enforceActions: "never",
 });`}
-          </pre>
-        </code>
+          </code>
+        </pre>
       </Section>
       <Section>
         Change <code>autorun(...)</code> code to observe <code>.fullName</code>{" "}
@@ -40,22 +39,20 @@ export default function Demo01() {
       </Section>
       <Section>
         Type:
-        <br />
-        <code>
-          <pre>
+        <pre>
+          <code>
             {`console.log("A");
 observableRoss.firstName = "Chandler";
 console.log("B");
 observableRoss.lastName = "Bing";
 console.log("C");`}
-          </pre>
-        </code>
+          </code>
+        </pre>
       </Section>
       <Section>
         Type:
-        <br />
-        <code>
-          <pre>
+        <pre>
+          <code>
             {`runInAction(()=> {
   console.log("A");
   observableRoss.firstName = "Chandler";
@@ -64,14 +61,13 @@ console.log("C");`}
   console.log("C");
 })
 console.log("D");`}
-          </pre>
-        </code>
+          </code>
+        </pre>
       </Section>
       <Section>
         Type:
-        <br />
-        <code>
-          <pre>
+        <pre>
+          <code>
             {`runInAction(()=> {
   console.log("A");
   observableRoss.firstName = "Chandler";
@@ -81,20 +77,19 @@ console.log("D");`}
   observableRoss.firstName = "Ross";
   observableRoss.lastName = "Geller";
 })`}
-          </pre>
-        </code>
+          </code>
+        </pre>
       </Section>
       <Section>
         Type:
-        <br />
-        <code>
-          <pre>
+        <pre>
+          <code>
             {`const fullName = observableRoss.fullName;
 autorun(() => {
   console.log("Friend from autorun():", fullName);
 });`}
-          </pre>
-        </code>
+          </code>
+        </pre>
       </Section>
     </Demo>
   );

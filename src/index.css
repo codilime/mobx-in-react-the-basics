@@ -15,6 +15,7 @@ code {
   display: inline-block;
   border-radius: 0.5em;
   color: #000000;
+  line-height: 1.4;
 }
 
 pre {
@@ -23,4 +24,9 @@ pre {
 
 a {
   color: #a3ed00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #699900
 }
