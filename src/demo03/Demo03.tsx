@@ -6,10 +6,7 @@ export default function Demo03() {
   return (
     <Demo title="Demo 03 - Observable state">
       <Section>
-        Open console, then type: <code>ross</code> and press ENTER
-      </Section>
-      <Section>
-        Type: <code>rachel</code>
+        Open console, then type: <code>ross</code> and <code>rachel</code>
       </Section>
       <Section>
         Type: <code>ross instanceof Friend</code>
