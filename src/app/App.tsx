@@ -1,5 +1,4 @@
 import React, { lazy, Suspense } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 const Demo01 = lazy(() => import("../demo01/Demo01"));
@@ -10,7 +9,17 @@ const Demo04 = lazy(() => import("../demo04/Demo04"));
 export const App = () => {
   return (
     <Router>
-      <div>
+      <div
+        style={{
+          display: "flex",
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#2D2926",
+        }}
+      >
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path="/demo01" component={Demo01} />

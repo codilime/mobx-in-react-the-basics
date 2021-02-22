@@ -25,6 +25,10 @@ autorun(() => {
     plainRoss: plainRoss.fullName,
     makeObservableRoss: makeObservableRoss.fullName,
     observableRoss: observableRoss.fullName,
+    // @ts-ignore
+    observableRossAge: observableRoss.age,
+    // @ts-ignore
+    makeObservableRossAge: makeObservableRoss.age,
   });
 });
 

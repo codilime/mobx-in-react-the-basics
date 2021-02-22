@@ -1,14 +1,15 @@
 import "./Demo04-console";
+import { Demo } from "../_/demo/Demo";
+import { Section } from "../_/section/Section";
 
 export default function Demo04() {
   return (
     <>
-      <h1>Demo 04 - Arrays</h1>
-      <ol>
-        <li>
+      <Demo title="Demo 04 - Arrays">
+        <Section>
           Open console, then type: <code>friends</code> and press ENTER
-        </li>
-        <li>
+        </Section>
+        <Section>
           Type:
           <br />
           <code>
@@ -18,8 +19,8 @@ export default function Demo04() {
 });`}
             </pre>
           </code>
-        </li>
-        <li>
+        </Section>
+        <Section>
           Type:
           <br />
           <code>
@@ -34,8 +35,8 @@ runInAction(() => {
 });`}
             </pre>
           </code>
-        </li>
-      </ol>
+        </Section>
+      </Demo>
     </>
   );
 }

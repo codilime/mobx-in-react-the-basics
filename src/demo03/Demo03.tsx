@@ -1,23 +1,22 @@
 import "./Demo03-console";
+import { Demo } from "../_/demo/Demo";
+import { Section } from "../_/section/Section";
 
 export default function Demo03() {
   return (
-    <>
-      <h1>Demo 03 - Observable state</h1>
-      <ol>
-        <li>
-          Open console, then type: <code>ross</code> and press ENTER
-        </li>
-        <li>
-          Type: <code>rachel</code>
-        </li>
-        <li>
-          Type: <code>ross instanceof Friend</code>
-        </li>
-        <li>
-          Type: <code>rachel instanceof Friend</code>
-        </li>
-      </ol>
-    </>
+    <Demo title="Demo 03 - Observable state">
+      <Section>
+        Open console, then type: <code>ross</code> and press ENTER
+      </Section>
+      <Section>
+        Type: <code>rachel</code>
+      </Section>
+      <Section>
+        Type: <code>ross instanceof Friend</code>
+      </Section>
+      <Section>
+        Type: <code>rachel instanceof Friend</code>
+      </Section>
+    </Demo>
   );
 }
