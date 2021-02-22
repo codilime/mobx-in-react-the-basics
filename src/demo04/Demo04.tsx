@@ -25,7 +25,7 @@ export default function Demo04() {
           <code>
             <pre>
               {`autorun(() => {
-  console.log("\\x1b[36m Friends from autorun():");
+  console.log("Friends from autorun():");
   console.log(friends[0].fullName);
 });
 

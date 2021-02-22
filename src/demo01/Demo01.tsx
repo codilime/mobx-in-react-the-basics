@@ -90,7 +90,7 @@ console.log("C");`}
             <pre>
               {`const fullName = observableRoss.fullName;
 autorun(() => {
-  console.log("\\x1b[36m Friend from autorun():", fullName);
+  console.log("Friend from autorun():", fullName);
 });`}
             </pre>
           </code>
