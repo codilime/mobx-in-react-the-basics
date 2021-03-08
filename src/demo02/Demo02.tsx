@@ -7,7 +7,7 @@ export default function Demo02() {
     <Demo title="Demo 02 - make(Auto)Observable(...)">
       <Section>
         Open console, then type: <code>plainRoss === makeObservableRoss</code>{" "}
-        and press ENTER
+        then press ENTER
       </Section>
       <Section>
         Type: <code>plainRoss === observableRoss</code>

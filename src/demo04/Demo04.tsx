@@ -7,7 +7,7 @@ export default function Demo04() {
     <>
       <Demo title="Demo 04 - Arrays">
         <Section>
-          Open console, then type: <code>friends</code> and press ENTER
+          Open console, then type: <code>friends</code> then press ENTER
         </Section>
         <Section>
           Type:

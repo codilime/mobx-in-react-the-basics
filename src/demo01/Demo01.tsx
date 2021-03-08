@@ -6,10 +6,10 @@ export default function Demo01() {
   return (
     <Demo title="Demo 01 - observer(...) and autorun(...)">
       <Section>
-        Open console, then type: <code>plainRoss</code> and press ENTER
+        Open console, then type: <code>plainRoss</code> then press ENTER
       </Section>
       <Section>
-        Type: <code>observableRoss</code> and press ENTER
+        Type: <code>observableRoss</code> then press ENTER
       </Section>
       <Section>
         Type: <code>plainRoss.firstName = 'Chandler'</code> and see what
