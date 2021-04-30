@@ -8,13 +8,13 @@ body {
 }
 
 code {
-  font-family: 'Roboto Mono', monospace;
-  background-color: rgba(0,0,0,0.05);
+  font-family: 'Consolas', monospace;
+  background-color: #292929;
   padding: 0.2em 0.4em;
   margin: 0.1em 0;
   display: inline-block;
-  border-radius: 0.5em;
-  color: #000000;
+  border-radius: 0.2em;
+  color: #b5bfcb;
   line-height: 1.4;
 }
 

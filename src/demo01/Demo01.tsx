@@ -1,6 +1,7 @@
 import "./Demo01-console";
 import { Demo } from "../common/demo/Demo";
 import { Section } from "../common/section/Section";
+import { Code } from "../common/code/Code";
 
 export default function Demo01() {
   return (
@@ -25,13 +26,11 @@ export default function Demo01() {
       </Section>
       <Section>
         Add at the beginning:
-        <pre>
-          <code>
-            {`configure({
+        <Code>
+          {`configure({
   enforceActions: "never",
 });`}
-          </code>
-        </pre>
+        </Code>
       </Section>
       <Section>
         Change <code>autorun(...)</code> code to observe <code>.fullName</code>{" "}
@@ -39,21 +38,18 @@ export default function Demo01() {
       </Section>
       <Section>
         Type:
-        <pre>
-          <code>
-            {`console.log("A");
+        <Code>
+          {`console.log("A");
 observableRoss.firstName = "Chandler";
 console.log("B");
 observableRoss.lastName = "Bing";
 console.log("C");`}
-          </code>
-        </pre>
+        </Code>
       </Section>
       <Section>
         Type:
-        <pre>
-          <code>
-            {`runInAction(()=> {
+        <Code>
+          {`runInAction(()=> {
   console.log("A");
   observableRoss.firstName = "Chandler";
   console.log("B");
@@ -61,14 +57,12 @@ console.log("C");`}
   console.log("C");
 })
 console.log("D");`}
-          </code>
-        </pre>
+        </Code>
       </Section>
       <Section>
         Type:
-        <pre>
-          <code>
-            {`runInAction(()=> {
+        <Code>
+          {`runInAction(()=> {
   console.log("A");
   observableRoss.firstName = "Chandler";
   console.log("B");
@@ -77,19 +71,16 @@ console.log("D");`}
   observableRoss.firstName = "Ross";
   observableRoss.lastName = "Geller";
 })`}
-          </code>
-        </pre>
+        </Code>
       </Section>
       <Section>
         Type:
-        <pre>
-          <code>
-            {`const fullName = observableRoss.fullName;
+        <Code>
+          {`const fullName = observableRoss.fullName;
 autorun(() => {
   console.log("Friend from autorun():", fullName);
 });`}
-          </code>
-        </pre>
+        </Code>
       </Section>
     </Demo>
   );

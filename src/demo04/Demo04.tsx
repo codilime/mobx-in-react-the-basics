@@ -1,6 +1,7 @@
 import "./Demo04-console";
 import { Demo } from "../common/demo/Demo";
 import { Section } from "../common/section/Section";
+import { Code } from "../common/code/Code";
 
 export default function Demo04() {
   return (
@@ -11,19 +12,16 @@ export default function Demo04() {
         </Section>
         <Section>
           Type:
-          <pre>
-            <code>
-              {`runInAction(() => {
+          <Code>
+            {`runInAction(() => {
   friends[0].fullName = "Chandler Bing";
 });`}
-            </code>
-          </pre>
+          </Code>
         </Section>
         <Section>
           Type:
-          <pre>
-            <code>
-              {`autorun(() => {
+          <Code>
+            {`autorun(() => {
   console.log("Friends from autorun():");
   console.log(friends[0].fullName);
 });
@@ -31,29 +29,20 @@ export default function Demo04() {
 runInAction(() => {
   friends[1].fullName = "Monica Geller";
 });`}
-            </code>
-          </pre>
+          </Code>
         </Section>
         <Section>
           Type:
-          <pre>
-            <code>
-              {`autorun(() => {
+          <Code>
+            {`autorun(() => {
   console.log("Friends from autorun():");
   console.table(toJS(friends));
 });`}
-            </code>
-          </pre>
+          </Code>
           Then in a console...
-          <pre>
-            <code>{`friends.remove(friends[1])`}</code>
-          </pre>
-          <pre>
-            <code>{`friends.clear()`}</code>
-          </pre>
-          <pre>
-            <code>{`friends.replace( [ { fullName: "Chandler Bing" } ] )`}</code>
-          </pre>
+          <Code>{`friends.remove(friends[1])`}</Code>
+          <Code>{`friends.clear()`}</Code>
+          <Code>{`friends.replace( [ { fullName: "Chandler Bing" } ] )`}</Code>
         </Section>
       </Demo>
     </>

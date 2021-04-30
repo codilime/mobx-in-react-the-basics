@@ -1,6 +1,7 @@
 import "./Demo02-console";
 import { Demo } from "../common/demo/Demo";
 import { Section } from "../common/section/Section";
+import { Code } from "../common/code/Code";
 
 export default function Demo02() {
   return (
@@ -28,9 +29,8 @@ export default function Demo02() {
       </Section>
       <Section>
         Add not existing <code>age</code> props to <code>autorun()</code>
-        <pre>
-          <code>
-            {`autorun(() => {
+        <Code>
+          {`autorun(() => {
   console.table({
     plainRoss: plainRoss.fullName,
     makeObservableRoss: makeObservableRoss.fullName,
@@ -41,8 +41,7 @@ export default function Demo02() {
     makeObservableRossAge: makeObservableRoss.age,
   });
 });`}
-          </code>
-        </pre>
+        </Code>
         then type: <code>observableRoss.age = 30</code> and{" "}
         <code>makeObservableRoss.age = 30</code>
       </Section>

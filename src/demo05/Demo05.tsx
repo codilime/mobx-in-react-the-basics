@@ -1,7 +1,7 @@
 import "./Demo05-console";
 import { Demo } from "../common/demo/Demo";
 import { Section } from "../common/section/Section";
-import { action, runInAction } from "mobx";
+import { Code } from "../common/code/Code";
 
 export default function Demo05() {
   return (
@@ -13,9 +13,8 @@ export default function Demo05() {
         </Section>
         <Section>
           Async actions wrapped by <code>action()</code>:
-          <pre>
-            <code>
-              {`  fetchFriends() {
+          <Code>
+            {`  fetchFriends() {
     this.status = "pending";
     fetchJson("/data/friends.json")
       .then(
@@ -28,14 +27,12 @@ export default function Demo05() {
         })
       );
   }`}
-            </code>
-          </pre>
+          </Code>
         </Section>
         <Section>
           Handle updates in separate actions:
-          <pre>
-            <code>
-              {`  fetchFriends() {
+          <Code>
+            {`  fetchFriends() {
     this.status = "pending";
     fetchJson("/data/friends.json")
       .then(this.fetchFriendsSuccess, this.fetchFriendsError);
@@ -49,14 +46,12 @@ export default function Demo05() {
   fetchFriendsError = () => {
     this.status = "error";
   };`}
-            </code>
-          </pre>
+          </Code>
         </Section>
         <Section>
           async/await + runInAction
-          <pre>
-            <code>
-              {`  async fetchFriends() {
+          <Code>
+            {`  async fetchFriends() {
     this.status = "pending";
     try {
       const response = await fetchJson("/data/friends.json");
@@ -70,14 +65,12 @@ export default function Demo05() {
       });
     }
   }`}
-            </code>
-          </pre>
+          </Code>
         </Section>
         <Section>
           <code>flow</code> + generator function
-          <pre>
-            <code>
-              {`  *fetchFriends() {
+          <Code>
+            {`  *fetchFriends() {
     this.status = "pending";
     try {
       const response = yield fetchJson("/data/friends.json");
@@ -87,8 +80,7 @@ export default function Demo05() {
       this.status = "error";
     }
   }`}
-            </code>
-          </pre>
+          </Code>
         </Section>
       </Demo>
     </>
