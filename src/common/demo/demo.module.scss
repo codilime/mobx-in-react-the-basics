@@ -27,9 +27,11 @@
   cursor: pointer;
   opacity: 0.2;
   user-select: none;
+  color: #444;
 
   &:hover {
     opacity: 0.4;
+    color: #444;
   }
 }
 

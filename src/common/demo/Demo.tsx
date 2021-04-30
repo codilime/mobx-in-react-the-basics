@@ -5,6 +5,7 @@ import { stringify, parse } from "qs";
 import { clamp, debounce } from "lodash";
 
 import styles from "./demo.module.scss";
+import { Link } from "react-router-dom";
 
 type Props = {
   title: React.ReactNode;
@@ -107,6 +108,14 @@ export const Demo: React.FunctionComponent<Props> = ({ title, children }) => {
         >
           &lt;
         </div>
+      )}
+      {currentSection === maxSection && (
+        <Link
+          to={"/"}
+          className={`${styles.Demo__Button} ${styles.Demo__Button_Next}`}
+        >
+          ^
+        </Link>
       )}
     </div>
   );
