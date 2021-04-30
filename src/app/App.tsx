@@ -6,6 +6,7 @@ const Demo02 = lazy(() => import("../demo02/Demo02"));
 const Demo03 = lazy(() => import("../demo03/Demo03"));
 const Demo04 = lazy(() => import("../demo04/Demo04"));
 const Demo05 = lazy(() => import("../demo05/Demo05"));
+const Demo06 = lazy(() => import("../demo06/Demo06"));
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
             <Route exact path="/demo03" component={Demo03} />
             <Route exact path="/demo04" component={Demo04} />
             <Route exact path="/demo05" component={Demo05} />
+            <Route exact path="/demo06" component={Demo06} />
             <Route path="*">
               <ul>
                 <li>
@@ -46,6 +48,9 @@ export const App = () => {
                 </li>
                 <li>
                   <Link to="/demo05">Demo 05 - Asynchronous actions</Link>
+                </li>
+                <li>
+                  <Link to="/demo06">Demo 06 - React Integration</Link>
                 </li>
               </ul>
             </Route>
