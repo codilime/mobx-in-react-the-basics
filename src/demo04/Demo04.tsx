@@ -34,6 +34,27 @@ runInAction(() => {
             </code>
           </pre>
         </Section>
+        <Section>
+          Type:
+          <pre>
+            <code>
+              {`autorun(() => {
+  console.log("Friends from autorun():");
+  console.table(toJS(friends));
+});`}
+            </code>
+          </pre>
+          Then in a console...
+          <pre>
+            <code>{`friends.remove(friends[1])`}</code>
+          </pre>
+          <pre>
+            <code>{`friends.clear()`}</code>
+          </pre>
+          <pre>
+            <code>{`friends.replace( [ { fullName: "Chandler Bing" } ] )`}</code>
+          </pre>
+        </Section>
       </Demo>
     </>
   );
