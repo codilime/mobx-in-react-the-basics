@@ -5,6 +5,7 @@ const Demo01 = lazy(() => import("../demo01/Demo01"));
 const Demo02 = lazy(() => import("../demo02/Demo02"));
 const Demo03 = lazy(() => import("../demo03/Demo03"));
 const Demo04 = lazy(() => import("../demo04/Demo04"));
+const Demo05 = lazy(() => import("../demo05/Demo05"));
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
             <Route exact path="/demo02" component={Demo02} />
             <Route exact path="/demo03" component={Demo03} />
             <Route exact path="/demo04" component={Demo04} />
+            <Route exact path="/demo05" component={Demo05} />
             <Route path="*">
               <ul>
                 <li>
@@ -41,6 +43,9 @@ export const App = () => {
                 </li>
                 <li>
                   <Link to="/demo04">Demo 04 - Arrays</Link>
+                </li>
+                <li>
+                  <Link to="/demo05">Demo 05 - Asynchronous actions</Link>
                 </li>
               </ul>
             </Route>

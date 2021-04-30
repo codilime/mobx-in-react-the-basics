@@ -17,6 +17,7 @@ declare global {
     Friend: any;
     FriendWithDecorators: any;
     friends: any;
+    friendsStore: any;
   }
 }
 
