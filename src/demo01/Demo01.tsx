@@ -82,6 +82,26 @@ autorun(() => {
 });`}
         </Code>
       </Section>
+      <Section>
+        Type:
+        <Code>
+          {`  get fullName() {
+    console.log("CALLED get fullName()");
+    return \`\${this.firstName} \${this.lastName}\`;
+  },`}
+        </Code>
+        ...and:
+        <Code>
+          {`autorun(() => {
+  console.log(
+    "Friend from autorun():",
+    observableRoss.fullName,
+    observableRoss.fullName
+  );
+});`}
+        </Code>
+        ...then in a console: `console.log(observableRoss.fullName)`
+      </Section>
     </Demo>
   );
 }
