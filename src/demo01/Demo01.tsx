@@ -5,7 +5,7 @@ import { Code } from "../common/code/Code";
 
 export default function Demo01() {
   return (
-    <Demo title="Demo 01 - observer(...) and autorun(...)">
+    <Demo title="Demo 01 - observable(...) and autorun(...)">
       <Section>
         Open console, then type: <code>plainRoss</code> then press ENTER
       </Section>

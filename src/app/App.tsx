@@ -34,7 +34,7 @@ export const App = () => {
               <ul>
                 <li>
                   <Link to="/demo01">
-                    Demo 01 - observer(...) and autorun(...)
+                    Demo 01 - observable(...) and autorun(...)
                   </Link>
                 </li>
                 <li>
