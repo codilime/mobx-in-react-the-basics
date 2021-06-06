@@ -6,6 +6,7 @@ import { clamp, debounce } from "lodash";
 
 import styles from "./demo.module.scss";
 import { Link } from "react-router-dom";
+import {CodiLayout} from "../codi-layout/CodiLayout";
 
 type Props = {
   title: React.ReactNode;
@@ -74,49 +75,40 @@ export const Demo: React.FunctionComponent<Props> = ({ title, children }) => {
   );
 
   return (
-    <div className={styles.Demo}>
-      <img
-        src="/corner-tr.png"
-        alt=""
-        style={{ position: "absolute", right: 0, width: "30vw", zIndex: -1 }}
-      />
-      <img
-        src="/corner-bl.png"
-        alt=""
-        style={{ position: "absolute", bottom: 0, width: "35vw", zIndex: -1 }}
-      />
-      <h1 className={styles.Demo__Title}>{title}</h1>
-      <div
-        ref={sectionsRef}
-        className={styles.Demo__Sections}
-        onScroll={updateCurrentSection}
-      >
-        {children}
-      </div>
-      {currentSection < maxSection && (
+    <CodiLayout>
+        <h1 className={styles.Demo__Title}>{title}</h1>
         <div
-          className={`${styles.Demo__Button} ${styles.Demo__Button_Next}`}
-          onClick={nextSection}
+          ref={sectionsRef}
+          className={styles.Demo__Sections}
+          onScroll={updateCurrentSection}
         >
-          &gt;
+          {children}
         </div>
-      )}
-      {!!currentSection && (
-        <div
-          className={`${styles.Demo__Button} ${styles.Demo__Button_Prev}`}
-          onClick={prevSection}
-        >
-          &lt;
-        </div>
-      )}
-      {currentSection === maxSection && (
-        <Link
-          to={"/"}
-          className={`${styles.Demo__Button} ${styles.Demo__Button_Next}`}
-        >
-          ^
-        </Link>
-      )}
-    </div>
+        {currentSection < maxSection && (
+          <div
+            className={`${styles.Demo__Button} ${styles.Demo__Button_Next}`}
+            onClick={nextSection}
+          >
+            &gt;
+          </div>
+        )}
+        {!!currentSection && (
+          <div
+            className={`${styles.Demo__Button} ${styles.Demo__Button_Prev}`}
+            onClick={prevSection}
+          >
+            &lt;
+          </div>
+        )}
+        {currentSection === maxSection && (
+          <Link
+            to={"/"}
+            className={`${styles.Demo__Button} ${styles.Demo__Button_Next}`}
+          >
+            ^
+          </Link>
+        )}
+    </CodiLayout>
+
   );
 };

@@ -1,5 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import {CodiLayout} from "../common/codi-layout/CodiLayout";
+import styles from './app.module.scss'
 
 const Demo01 = lazy(() => import("../demo01/Demo01"));
 const Demo02 = lazy(() => import("../demo02/Demo02"));
@@ -11,17 +13,7 @@ const Demo06 = lazy(() => import("../demo06/Demo06"));
 export const App = () => {
   return (
     <Router>
-      <div
-        style={{
-          display: "flex",
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#2D2926",
-        }}
-      >
+      <CodiLayout>
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path="/demo01" component={Demo01} />
@@ -31,7 +23,7 @@ export const App = () => {
             <Route exact path="/demo05" component={Demo05} />
             <Route exact path="/demo06" component={Demo06} />
             <Route path="*">
-              <ul>
+              <ul className={styles.App__Links}>
                 <li>
                   <Link to="/demo01">
                     Demo 01 - observable(...) and autorun(...)
@@ -56,7 +48,7 @@ export const App = () => {
             </Route>
           </Switch>
         </Suspense>
-      </div>
+      </CodiLayout>
     </Router>
   );
 };
