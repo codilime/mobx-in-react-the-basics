@@ -5,7 +5,7 @@ import { makeAutoObservable } from "mobx";
 import { observer } from "mobx-react-lite";
 
 class Friend {
-  constructor(public firstName: string, public lastName: string) {
+  constructor(public id: string, public firstName: string, public lastName: string) {
     makeAutoObservable(this);
   }
   get fullName() {
@@ -32,7 +32,7 @@ class FriendsStore {
     try {
       const response = yield fetch("/data/friends.json").then((r) => r.json());
       this.friends = response.map(
-        ({ firstName, lastName }) => new Friend(firstName, lastName)
+        ({ id, firstName, lastName }) => new Friend(id, firstName, lastName)
       );
       this.status = "success";
     } catch (e) {
@@ -42,7 +42,7 @@ class FriendsStore {
   // importState(state) {
   //   this.status = state.status;
   //   this.friends = state.friends.map(
-  //     ({ firstName, lastName }) => new Friend(firstName, lastName)
+  //     ({ id, firstName, lastName }) => new Friend(id, firstName, lastName)
   //   );
   // }
 }
@@ -81,7 +81,7 @@ const FriendsList = observer(() => {
     return (
       <ul>
         {friends.map((friend) => (
-          <FriendDetails key={friend.fullName} friend={friend}/>
+          <FriendDetails key={friend.id} friend={friend}/>
         ))}
       </ul>
     );
