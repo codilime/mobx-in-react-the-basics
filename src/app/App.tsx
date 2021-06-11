@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import {CodiLayout} from "../common/codi-layout/CodiLayout";
-import styles from './app.module.scss'
+import { CodiLayout } from "../common/codi-layout/CodiLayout";
+import styles from "./app.module.scss";
 
 const Demo01 = lazy(() => import("../demo01/Demo01"));
 const Demo02 = lazy(() => import("../demo02/Demo02"));
@@ -41,6 +41,7 @@ export const App = () => {
                 <li>
                   <Link to="/demo05">Demo 05 - Asynchronous actions</Link>
                 </li>
+                <li>...back to slides</li>
                 <li>
                   <Link to="/demo06">Demo 06 - React Integration</Link>
                 </li>
