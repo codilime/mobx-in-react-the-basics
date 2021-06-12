@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 
 declare global {
   interface Window {
+    settings: any;
     plainRoss: any;
     observableRoss: any;
     makeObservableRoss: any;

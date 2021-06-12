@@ -21,16 +21,16 @@ export default function Demo01() {
         happened
       </Section>
       <Section>
-        Type: <code>observableRoss.lastName = 'Bing'</code> and see what
-        happened
-      </Section>
-      <Section>
         Add at the beginning:
         <Code>
           {`configure({
   enforceActions: "never",
 });`}
         </Code>
+      </Section>
+      <Section>
+        Type: <code>observableRoss.lastName = 'Bing'</code> and see what
+        happened
       </Section>
       <Section>
         Change <code>autorun(...)</code> code to observe <code>.fullName</code>{" "}
@@ -101,6 +101,33 @@ autorun(() => {
 });`}
         </Code>
         ...then in a console:<code>console.log(observableRoss.fullName)</code>
+      </Section>
+      <Section>
+        Type:
+        <Code>{`const settings = observable({ showLastName: true });
+window.settings = settings;`}</Code>
+        ...and:
+        <Code>
+          {`get fullName() {
+    if (settings.showLastName) {
+      return \`\${this.firstName} \${this.lastName}\`;
+    } else {
+      return this.firstName;
+    }
+  },`}
+        </Code>
+        ...then in a console:<code>settings.showLastName = false</code> and{" "}
+        <code>observableRoss.lastName = "Bing";</code>
+      </Section>
+      <Section>
+        Change <code>get fullName()</code> to:
+        <Code>{`getFullName() {`}</Code>
+        ...and:
+        <Code>
+          {`autorun(() => {
+  console.log("👉 Friend from autorun() 👉", observableRoss.getFullName());
+});`}
+        </Code>
       </Section>
     </Demo>
   );
