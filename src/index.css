@@ -7,6 +7,11 @@ body {
   color: #444;
 }
 
+::selection {
+  color: #A3ED00;
+  background: #05868e;
+}
+
 code {
   font-family: 'Consolas', monospace;
   background-color: #292929;

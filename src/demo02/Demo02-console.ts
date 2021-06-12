@@ -23,8 +23,8 @@ makeObservable(plainRoss, {
 
 autorun(() => {
   console.table({
-    plainRossAge: plainRoss.age,
-    observableRossAge: observableRoss.age,
+    plainRoss: plainRoss.fullName,
+    observableRoss: observableRoss.fullName,
   });
 });
 
