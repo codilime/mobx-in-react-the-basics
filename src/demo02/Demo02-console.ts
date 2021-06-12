@@ -1,9 +1,9 @@
 // @ts-nocheck
-import { action, autorun, computed, makeObservable, observable } from "mobx";
+import { action, autorun, computed, makeObservable, observable } from 'mobx';
 
 const plainRoss = {
-  firstName: "Ross",
-  lastName: "Geller",
+  firstName: 'Ross',
+  lastName: 'Geller',
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   },

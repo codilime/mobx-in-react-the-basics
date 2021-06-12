@@ -1,16 +1,22 @@
 // @ts-nocheck
 import { createContext, useContext, useMemo } from "react";
-import remotedev from "mobx-remotedev"
+import remotedev from "mobx-remotedev";
 import { makeAutoObservable } from "mobx";
 import { observer } from "mobx-react-lite";
 
 class Friend {
-  constructor(public id: string, public firstName: string, public lastName: string) {
+  constructor(
+    public id: string,
+    public firstName: string,
+    public lastName: string
+  ) {
     makeAutoObservable(this);
   }
+
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
+
   setName(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -20,13 +26,16 @@ class Friend {
 class FriendsStore {
   status = "";
   friends = [];
+
   get isLoading() {
     return this.status === "pending";
   }
+
   constructor() {
     makeAutoObservable(this);
-    // remotedev(this, {global: true, name: this.constructor.name});
+    remotedev(this, { global: true, name: this.constructor.name });
   }
+
   *fetchFriends() {
     this.status = "pending";
     try {
@@ -39,12 +48,6 @@ class FriendsStore {
       this.status = "error";
     }
   }
-  // importState(state) {
-  //   this.status = state.status;
-  //   this.friends = state.friends.map(
-  //     ({ id, firstName, lastName }) => new Friend(id, firstName, lastName)
-  //   );
-  // }
 }
 
 const friendsStore = new FriendsStore();
@@ -76,12 +79,12 @@ const FriendsToolbar = observer(() => {
 const FriendsList = observer(() => {
   const { friends, isLoading } = friendsStore;
   if (isLoading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   } else {
     return (
       <ul>
         {friends.map((friend) => (
-          <FriendDetails key={friend.id} friend={friend}/>
+          <FriendDetails key={friend.id} friend={friend} />
         ))}
       </ul>
     );

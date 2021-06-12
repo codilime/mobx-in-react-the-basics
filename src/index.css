@@ -1,37 +1,37 @@
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 20px;
-  color: #444;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    color: #444;
 }
 
 ::selection {
-  color: #A3ED00;
-  background: #05868e;
+    color: #A3ED00;
+    background: #05868e;
 }
 
 code {
-  font-family: 'Consolas', monospace;
-  background-color: #292929;
-  padding: 0.2em 0.4em;
-  margin: 0.1em 0;
-  display: inline-block;
-  border-radius: 0.2em;
-  color: #b5bfcb;
-  line-height: 1.4;
+    font-family: 'Consolas', monospace;
+    background-color: #292929;
+    padding: 0.2em 0.4em;
+    margin: 0.1em 0;
+    display: inline-block;
+    border-radius: 0.2em;
+    color: #b5bfcb;
+    line-height: 1.4;
 }
 
 pre {
-  margin: 0.2em 0;
+    margin: 0.2em 0;
 }
 
 a {
-  color: #05868e;
-  text-decoration: none;
+    color: #05868e;
+    text-decoration: none;
 }
 
 a:hover {
-  color: #699900;
+    color: #699900;
 }
