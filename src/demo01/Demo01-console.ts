@@ -1,4 +1,4 @@
-import { autorun, observable, runInAction } from "mobx";
+import { autorun, observable } from "mobx";
 
 const plainRoss = {
   firstName: "Ross",
@@ -12,15 +12,6 @@ const observableRoss = observable(plainRoss);
 autorun(() => {
   console.log("👉 Friend from autorun() 👉", observableRoss.firstName);
 });
-
-runInAction(() => {
-  console.log("👉 A");
-  observableRoss.firstName = "Chandler";
-  console.log("👉 B");
-  observableRoss.lastName = "Bing";
-  console.log("👉 C");
-});
-console.log("👉 D");
 
 window.plainRoss = plainRoss;
 window.observableRoss = observableRoss;

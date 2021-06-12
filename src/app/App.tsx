@@ -28,7 +28,7 @@ export const App = () => {
                 <ul className={styles.App__Links}>
                   <li>
                     <Link to="/demo01">
-                      Demo 01 - observable(...) and autorun(...)
+                      Demo 01 - autorun(...) and observable(...)
                     </Link>
                   </li>
                   <li>
