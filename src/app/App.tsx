@@ -23,29 +23,36 @@ export const App = () => {
             <Route exact path="/demo05" component={Demo05} />
             <Route exact path="/demo06" component={Demo06} />
             <Route path="*">
-              <ul className={styles.App__Links}>
-                <li>
-                  <Link to="/demo01">
-                    Demo 01 - observable(...) and autorun(...)
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/demo02">Demo 02 - make(Auto)Observable(...)</Link>
-                </li>
-                <li>
-                  <Link to="/demo03">Demo 03 - Observable state</Link>
-                </li>
-                <li>
-                  <Link to="/demo04">Demo 04 - Arrays</Link>
-                </li>
-                <li>
-                  <Link to="/demo05">Demo 05 - Asynchronous actions</Link>
-                </li>
-                <li>...back to slides</li>
-                <li>
-                  <Link to="/demo06">Demo 06 - React Integration</Link>
-                </li>
-              </ul>
+              <section className={styles.App__Section}>
+                <h3>How MobX works?</h3>
+                <ul className={styles.App__Links}>
+                  <li>
+                    <Link to="/demo01">
+                      Demo 01 - observable(...) and autorun(...)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/demo02">
+                      Demo 02 - make(Auto)Observable(...)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/demo03">Demo 03 - Observable state</Link>
+                  </li>
+                  <li>
+                    <Link to="/demo04">Demo 04 - Arrays</Link>
+                  </li>
+                  <li>
+                    <Link to="/demo05">Demo 05 - Asynchronous actions</Link>
+                  </li>
+                </ul>
+                <h3>How to integrate with React?</h3>
+                <ul className={styles.App__Links}>
+                  <li>
+                    <Link to="/demo06">Demo 06 - React Integration</Link>
+                  </li>
+                </ul>
+              </section>
             </Route>
           </Switch>
         </Suspense>
