@@ -22,7 +22,7 @@ export default function Demo04() {
           Type:
           <Code>
             {`autorun(() => {
-  console.log("Friends from autorun():");
+  console.log("👉 Friends from autorun() 👉 ");
   console.log(friends[0].fullName);
 });
 
@@ -35,7 +35,7 @@ runInAction(() => {
           Type:
           <Code>
             {`autorun(() => {
-  console.log("Friends from autorun():");
+  console.log("👉 Friends from autorun() 👉 ");
   console.table(toJS(friends));
 });`}
           </Code>

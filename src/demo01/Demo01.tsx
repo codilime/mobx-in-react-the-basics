@@ -39,35 +39,35 @@ export default function Demo01() {
       <Section>
         Type:
         <Code>
-          {`console.log("A");
+          {`console.log("👉 A");
 observableRoss.firstName = "Chandler";
-console.log("B");
+console.log("👉 B");
 observableRoss.lastName = "Bing";
-console.log("C");`}
+console.log("👉 C");`}
         </Code>
       </Section>
       <Section>
         Type:
         <Code>
           {`runInAction(()=> {
-  console.log("A");
+  console.log("👉 A");
   observableRoss.firstName = "Chandler";
-  console.log("B");
+  console.log("👉 B");
   observableRoss.lastName = "Bing";
-  console.log("C");
+  console.log("👉 C");
 })
-console.log("D");`}
+console.log("👉 D");`}
         </Code>
       </Section>
       <Section>
         Type:
         <Code>
           {`runInAction(()=> {
-  console.log("A");
+  console.log("👉 A");
   observableRoss.firstName = "Chandler";
-  console.log("B");
+  console.log("👉 B");
   observableRoss.lastName = "Bing";
-  console.log("C");
+  console.log("👉 C");
   observableRoss.firstName = "Ross";
   observableRoss.lastName = "Geller";
 })`}
@@ -78,7 +78,7 @@ console.log("D");`}
         <Code>
           {`const fullName = observableRoss.fullName;
 autorun(() => {
-  console.log("Friend from autorun():", fullName);
+  console.log("👉 Friend from autorun() 👉", fullName);
 });`}
         </Code>
       </Section>
@@ -86,7 +86,7 @@ autorun(() => {
         Type:
         <Code>
           {`  get fullName() {
-    console.log("CALLED get fullName()");
+    console.log("👉 CALLED get fullName()");
     return \`\${this.firstName} \${this.lastName}\`;
   },`}
         </Code>
@@ -94,13 +94,13 @@ autorun(() => {
         <Code>
           {`autorun(() => {
   console.log(
-    "Friend from autorun():",
+    "👉 Friend from autorun() 👉",
     observableRoss.fullName,
     observableRoss.fullName
   );
 });`}
         </Code>
-        ...then in a console: `console.log(observableRoss.fullName)`
+        ...then in a console:<code>console.log(observableRoss.fullName)</code>
       </Section>
     </Demo>
   );

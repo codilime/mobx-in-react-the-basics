@@ -7,7 +7,7 @@ const friends = observable([
 ]);
 
 autorun(() => {
-  console.log("Friends from autorun():");
+  console.log("👉 Friends from autorun() 👉 ");
   console.log(friends.map((f) => f.fullName).join(", \n"));
 });
 
