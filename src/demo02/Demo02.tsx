@@ -32,18 +32,13 @@ export default function Demo02() {
         <Code>
           {`autorun(() => {
   console.table({
-    plainRoss: plainRoss.fullName,
-    makeObservableRoss: makeObservableRoss.fullName,
-    observableRoss: observableRoss.fullName,
-    // @ts-ignore
-    observableRossAge: observableRoss.age,
-    // @ts-ignore
-    makeObservableRossAge: makeObservableRoss.age,
+    plainRossAge: plainRoss.age,
+    observableRossAge: observableRoss.age,   
   });
 });`}
         </Code>
         then type: <code>observableRoss.age = 30</code> and{" "}
-        <code>makeObservableRoss.age = 30</code>
+        <code>plainRoss.age = 30</code>
       </Section>
     </Demo>
   );

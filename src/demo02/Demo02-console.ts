@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { action, autorun, computed, makeObservable, observable } from "mobx";
 
 const plainRoss = {
@@ -13,7 +14,7 @@ const plainRoss = {
 };
 
 const observableRoss = observable(plainRoss);
-const makeObservableRoss = makeObservable(plainRoss, {
+makeObservable(plainRoss, {
   firstName: observable,
   lastName: observable,
   fullName: computed,
@@ -22,12 +23,10 @@ const makeObservableRoss = makeObservable(plainRoss, {
 
 autorun(() => {
   console.table({
-    plainRoss: plainRoss.fullName,
-    makeObservableRoss: makeObservableRoss.fullName,
-    observableRoss: observableRoss.fullName,
+    plainRossAge: plainRoss.age,
+    observableRossAge: observableRoss.age,
   });
 });
 
 window.plainRoss = plainRoss;
 window.observableRoss = observableRoss;
-window.makeObservableRoss = makeObservableRoss;
