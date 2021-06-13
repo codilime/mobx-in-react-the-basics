@@ -7,17 +7,16 @@ export default function Demo01() {
   return (
     <Demo title="Demo 01 - autorun(...) and observable(...)">
       <Section>
-        Open console, then type: <code>plainRoss</code> then press ENTER
+        Open console, then type: <code>friend</code> then press ENTER
       </Section>
       <Section>
-        Type: <code>observableRoss</code> then press ENTER
+        Type: <code>observableFriend</code> then press ENTER
       </Section>
       <Section>
-        Type: <code>plainRoss.firstName = 'Chandler'</code> and see what
-        happened
+        Type: <code>friend.firstName = 'Chandler'</code> and see what happened
       </Section>
       <Section>
-        Type: <code>observableRoss.firstName = 'Chandler'</code> and see what
+        Type: <code>observableFriend.firstName = 'Chandler'</code> and see what
         happened
       </Section>
       <Section>
@@ -29,7 +28,7 @@ export default function Demo01() {
         </Code>
       </Section>
       <Section>
-        Type: <code>observableRoss.lastName = 'Bing'</code> and see what
+        Type: <code>observableFriend.lastName = 'Bing'</code> and see what
         happened
       </Section>
       <Section>
@@ -40,9 +39,9 @@ export default function Demo01() {
         Type:
         <Code>
           {`console.log("👉 A");
-observableRoss.firstName = "Chandler";
+observableFriend.firstName = "Chandler";
 console.log("👉 B");
-observableRoss.lastName = "Bing";
+observableFriend.lastName = "Bing";
 console.log("👉 C");`}
         </Code>
       </Section>
@@ -51,9 +50,9 @@ console.log("👉 C");`}
         <Code>
           {`runInAction(()=> {
   console.log("👉 A");
-  observableRoss.firstName = "Chandler";
+  observableFriend.firstName = "Chandler";
   console.log("👉 B");
-  observableRoss.lastName = "Bing";
+  observableFriend.lastName = "Bing";
   console.log("👉 C");
 })
 console.log("👉 D");`}
@@ -64,21 +63,21 @@ console.log("👉 D");`}
         <Code>
           {`runInAction(()=> {
   console.log("👉 A");
-  observableRoss.firstName = "Chandler";
+  observableFriend.firstName = "Chandler";
   console.log("👉 B");
-  observableRoss.lastName = "Bing";
+  observableFriend.lastName = "Bing";
   console.log("👉 C");
-  observableRoss.firstName = "Ross";
-  observableRoss.lastName = "Geller";
+  observableFriend.firstName = "Ross";
+  observableFriend.lastName = "Geller";
 })`}
         </Code>
       </Section>
       <Section>
         Type:
         <Code>
-          {`const fullName = observableRoss.fullName;
+          {`const fullName = observableFriend.fullName;
 autorun(() => {
-  console.log("👉 Friend from autorun() 👉", fullName);
+  console.log("👉 [autorun]", fullName);
 });`}
         </Code>
       </Section>
@@ -86,7 +85,7 @@ autorun(() => {
         Type:
         <Code>
           {`  get fullName() {
-    console.log("👉 CALLED get fullName()");
+    console.log("👉 [get fullName]");
     return \`\${this.firstName} \${this.lastName}\`;
   },`}
         </Code>
@@ -94,13 +93,13 @@ autorun(() => {
         <Code>
           {`autorun(() => {
   console.log(
-    "👉 Friend from autorun() 👉",
-    observableRoss.fullName,
-    observableRoss.fullName
+    "👉 [autorun]",
+    observableFriend.fullName,
+    observableFriend.fullName
   );
 });`}
         </Code>
-        ...then in a console:<code>console.log(observableRoss.fullName)</code>
+        ...then in a console:<code>observableFriend.fullName</code>
       </Section>
       <Section>
         Type:
@@ -116,8 +115,9 @@ window.settings = settings;`}</Code>
     }
   },`}
         </Code>
-        ...then in a console:<code>settings.showLastName = false</code> and{" "}
-        <code>observableRoss.lastName = "Bing";</code>
+        ...then in a console:
+        <Code>{`settings.showLastName = false;
+observableFriend.lastName = "Bing";`}</Code>
       </Section>
       <Section>
         Change <code>get fullName()</code> to:
@@ -125,7 +125,9 @@ window.settings = settings;`}</Code>
         ...and:
         <Code>
           {`autorun(() => {
-  console.log("👉 Friend from autorun() 👉", observableRoss.getFullName());
+  console.log("👉 [autorun]",
+    observableFriend.getFullName()
+  );
 });`}
         </Code>
       </Section>

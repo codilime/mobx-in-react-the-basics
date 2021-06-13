@@ -7,19 +7,19 @@ export default function Demo02() {
   return (
     <Demo title="Demo 02 - make(Auto)Observable(...)">
       <Section>
-        Open console, then type: <code>plainRoss === observableRoss</code> then
+        Open console, then type: <code>friend === observableFriend</code> then
         press ENTER
       </Section>
       <Section>
-        Type: <code>plainRoss</code>
+        Type: <code>friend</code>
       </Section>
       <Section>
         Type:
-        <code>plainRoss.setName('Chandler', 'Bing')</code>
+        <code>friend.setName('Chandler', 'Bing')</code>
       </Section>
       <Section>
         Type:
-        <code>observableRoss.setName('Rossie', 'Gellerio')</code>
+        <code>observableFriend.setName('Rossie', 'Gellerio')</code>
       </Section>
       <Section>
         Change <code>makeObservable</code> to <code>makeAutoObservable</code>
@@ -28,14 +28,12 @@ export default function Demo02() {
         Add not existing <code>age</code> props to <code>autorun()</code>
         <Code>
           {`autorun(() => {
-  console.table({
-    plainRossAge: plainRoss.age,
-    observableRossAge: observableRoss.age,   
-  });
+  console.log("👉 [autorun] friend.age:", friend.age);
+  console.log("👉 [autorun] observableFriend.age:", observableFriend.age);
 });`}
         </Code>
-        then type: <code>observableRoss.age = 30</code> and{" "}
-        <code>plainRoss.age = 30</code>
+        then type: <code>observableFriend.age = 30</code> and{" "}
+        <code>friend.age = 30</code>
       </Section>
     </Demo>
   );

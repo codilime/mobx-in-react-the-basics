@@ -5,6 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size: 20px;
     color: #444;
+    user-select: none;
 }
 
 ::selection {
@@ -21,10 +22,12 @@ code {
     border-radius: 0.2em;
     color: #b5bfcb;
     line-height: 1.4;
+    user-select: text;
 }
 
 pre {
     margin: 0.2em 0;
+    user-select: text;
 }
 
 a {

@@ -23,8 +23,7 @@ class FriendsStore {
 const friendsStore = new FriendsStore();
 
 autorun(() => {
-  console.log("👉 Friends store from autorun() 👉 ");
-  console.log(toJS(friendsStore));
+  console.log("👉 [autorun]", toJS(friendsStore));
 });
 
 window.friendsStore = friendsStore;

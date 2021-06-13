@@ -1,17 +1,17 @@
 import { autorun, observable } from "mobx";
 
-const plainRoss = {
+const friend = {
   firstName: "Ross",
   lastName: "Geller",
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-const observableRoss = observable(plainRoss);
+const observableFriend = observable(friend);
 
 autorun(() => {
-  console.log("👉 Friend from autorun() 👉", observableRoss.firstName);
+  console.log("👉 [autorun]", observableFriend.firstName);
 });
 
-window.plainRoss = plainRoss;
-window.observableRoss = observableRoss;
+window.friend = friend;
+window.observableFriend = observableFriend;

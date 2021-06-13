@@ -53,14 +53,14 @@ class FriendsStore {
 const friendsStore = new FriendsStore();
 window.friendsStore = friendsStore;
 
-export const FriendsApp = observer(() => {
+export const FriendsApp = () => {
   return (
     <section>
       <FriendsToolbar />
       <FriendsList />
     </section>
   );
-});
+};
 
 const FriendsToolbar = observer(() => {
   const { friends } = friendsStore;

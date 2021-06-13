@@ -69,13 +69,10 @@ const ross = new Friend("Ross", "Geller");
 const rachel = createFriend("Rachel", "Green");
 
 autorun(() => {
-  console.table({
-    ross: ross.fullName,
-    rachel: rachel.fullName,
-  });
+  console.log("👉 [autorun] ross:", ross.fullName);
+  console.log("👉 [autorun] rachel:", rachel.fullName);
 });
 
 window.ross = ross;
 window.rachel = rachel;
 window.Friend = Friend;
-window.FriendWithDecorators = FriendWithDecorators;

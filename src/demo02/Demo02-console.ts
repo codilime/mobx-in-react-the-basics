@@ -1,9 +1,9 @@
 // @ts-nocheck
-import { action, autorun, computed, makeObservable, observable } from 'mobx';
+import { action, autorun, computed, makeObservable, observable } from "mobx";
 
-const plainRoss = {
-  firstName: 'Ross',
-  lastName: 'Geller',
+const friend = {
+  firstName: "Ross",
+  lastName: "Geller",
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
   },
@@ -13,8 +13,8 @@ const plainRoss = {
   },
 };
 
-const observableRoss = observable(plainRoss);
-makeObservable(plainRoss, {
+const observableFriend = observable(friend);
+makeObservable(friend, {
   firstName: observable,
   lastName: observable,
   fullName: computed,
@@ -22,11 +22,9 @@ makeObservable(plainRoss, {
 });
 
 autorun(() => {
-  console.table({
-    plainRoss: plainRoss.fullName,
-    observableRoss: observableRoss.fullName,
-  });
+  console.log("👉 [autorun] friend:", friend.fullName);
+  console.log("👉 [autorun] observableFriend:", observableFriend.fullName);
 });
 
-window.plainRoss = plainRoss;
-window.observableRoss = observableRoss;
+window.friend = friend;
+window.observableFriend = observableFriend;
