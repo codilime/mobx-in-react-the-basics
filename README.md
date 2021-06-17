@@ -1,5 +1,7 @@
 # MobX in React - The basics
 
+See the recorded live presentation: [https://www.youtube.com/watch?v=m_XZeW7M1hI](https://www.youtube.com/watch?v=m_XZeW7M1hI)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Running the project
