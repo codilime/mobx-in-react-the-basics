@@ -50,19 +50,22 @@ class FriendsStore {
   }
 }
 
-const friendsStore = new FriendsStore();
-window.friendsStore = friendsStore;
+const FriendStoreContext = createContext<FriendsStore>();
 
 export const FriendsApp = () => {
+  const friendsStore = useMemo(() => new FriendsStore());
   return (
-    <section>
-      <FriendsToolbar />
-      <FriendsList />
-    </section>
+    <FriendStoreContext.Provider value={friendsStore}>
+      <section>
+        <FriendsToolbar />
+        <FriendsList />
+      </section>
+    </FriendStoreContext.Provider>
   );
 };
 
 const FriendsToolbar = observer(() => {
+  const friendsStore = useContext(FriendStoreContext);
   const { friends } = friendsStore;
   return (
     <>
@@ -77,6 +80,7 @@ const FriendsToolbar = observer(() => {
 });
 
 const FriendsList = observer(() => {
+  const friendsStore = useContext(FriendStoreContext);
   const { friends, isLoading } = friendsStore;
   if (isLoading) {
     return <div>Loading...</div>;
